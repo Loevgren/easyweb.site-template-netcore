@@ -1,0 +1,36 @@
+@model MenuFeature
+@* Compared to 90% of everything else rendered, the default Menu has a custom Model it renders below.
+   A menu options rendering the menu like other studio view/elements exists, but is not yet set to default.
+*@
+
+<nav ew-if="@Model.Nodes" class="@Model.CssClass nav" id="@Model.Options?.ElementId">
+    <ul class="main-menu">
+        @foreach (var menu in Model.Nodes)
+        {
+            <li ew-active-class="active" ew-active-for="@menu" class="dropdown @Model.Options?.ItemCssClasses">
+                <a ew-href="@menu" ew-if="@menu.Children">
+                    @menu.Label
+                    <i class="caret"></i>
+                    <span class="sr-only" ew-translate>Open</span>
+                </a>
+                <a ew-href="@menu" ew-if-not="@menu.Children">
+                    @menu.Label
+                </a>
+                <ul class="submenu dropdown" ew-if="@menu.Children">
+                    @foreach (var childNode in menu.Children)
+                    {
+                        <li ew-active-class="active" ew-active-for="@childNode">
+                            <a ew-href="@childNode">@childNode.Label</a>
+                        </li>
+                    }
+                </ul>
+            </li>
+        }
+    </ul>
+</nav>
+@* Mobile menu trigger-template, JS/CSS for handling it not enabled by default. *@
+<div class="hamburger js-hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>

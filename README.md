@@ -1,0 +1,1 @@
+# Easyweb.site plain example template
