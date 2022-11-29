@@ -11,8 +11,11 @@ Simple and plain .NET 6 starting template for creating content using Easyweb CMS
 4. Run teh app to make sure your connection is up running and working
 
 5. Start building using the studio in Easyweb and the tag helpers provided by the Easyweb.site-packages, such as:
-``<ew-template for-key="[key] />"``
-``<div ew-list="[key]>More content...</div>"``
-``<span ew-for="[key]></span>"``
+6. 
+``<ew-template for-key="[key]" />``
+
+``<div ew-list="[key]">More content...</div>``
+
+``<span ew-for="[key]"></span>``
 
 6. Read and learn more at https://www.easyweb.site
