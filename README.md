@@ -44,7 +44,7 @@ The most fundamental tags are:
 When rendering it will search for a view matching the key or fall back to printing default content.
 
 ##### <ew-list />
-``<ew-list />``, or when used with key, ``<ew-list for-key="[key]" />``, or when used as an attribute on a HTML-element, ´´<div ew-list="[myKey]"></div>`` will render the inner markup for each added content in Easyweb. Works both with components with a limit set to > 1 as well as custom feature lists like ```ViewListComponent``.
+``<ew-list />``, or when used with key, ``<ew-list for-key="[key]" />``, or when used as an attribute on a HTML-element, ``<div ew-list="[myKey]"></div>`` will render the inner markup for each added content in Easyweb. Works both with components with a limit set to > 1 as well as custom feature lists like `ViewListComponent``.
 
 ##### <ew-for />
 ``<TAG ew-for="[key]" />``, is a the final "printing" tag, which will print the content matching the key given from easyweb into the tag where it applies. 
