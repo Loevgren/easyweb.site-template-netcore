@@ -28,7 +28,7 @@ The view structure is read from the module-structure within Easyweb, and views w
 
 #### Examples of basic folder structure:
 
-Any view added to a module in Easyweb will be searched for using it's key. For example, the standard view in a module "News" will be searched for in ``/Views/News/Index.cshtml`` as well as ``/Views/News/News.cshtml`` (Both are searched for as preferences differ.) A Module-view in a "Products"-module will be searched for in ``/Views/Products/Module.cshtml`` and a Folder view similarity with ´´Folder.cshtml´´.
+Any view added to a module in Easyweb will be searched for using its key. For example, the standard view in a module "News" will be searched for in ``/Views/News/Index.cshtml`` as well as ``/Views/News/News.cshtml`` (Both are searched for as preferences differ.) A Module-view in a "Products"-module will be searched for in ``/Views/Products/Module.cshtml`` and a Folder view similarly with ``Folder.cshtml``.
 
 If not found, the search looks through ``/Views/Shared/[key].cshtml`` and finally ``/Views/[key].cshtml``. Having a root fallback view ``/Views/Index.cshtml`` is good practice as it would always be found as a last resort and print any default content written in it.
 
