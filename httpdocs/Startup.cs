@@ -123,6 +123,11 @@ namespace Easyweb
             //
             if (_env.IsDevelopment())
             {
+                // Quick fix to ensure /wwwroot-folder exists to avoid a first run-error as it's not committed to repo
+                //
+                if (!Directory.Exists(_env.WebRootPath))
+                    Directory.CreateDirectory(_env.WebRootPath);
+                
                 // Friendly developer error pages
                 //
                 app.UseDeveloperExceptionPage();
