@@ -60,9 +60,4 @@
         </Content>
     </ItemGroup>
     
-    <ItemGroup>
-      <Folder Include="Views\Pages\" />
-      <Folder Include="Views\_Templates\" />
-    </ItemGroup>
-    
 </Project>
