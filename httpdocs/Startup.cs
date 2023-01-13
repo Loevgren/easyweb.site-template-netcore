@@ -18,6 +18,7 @@ using Microsoft.Extensions.Hosting;
 using Easyweb.Site.DataApi;
 using Easyweb.Site;
 using Easyweb.Site.Core.Imaging;
+using System.IO;
 
 namespace Easyweb
 {
@@ -125,8 +126,9 @@ namespace Easyweb
             {
                 // Quick fix to ensure /wwwroot-folder exists to avoid a first run-error as it's not committed to repo
                 //
-                if (!Directory.Exists(_env.WebRootPath))
-                    Directory.CreateDirectory(_env.WebRootPath);
+                var webRootPath = Path.Combine(_env.ContentRootPath, "wwwroot");
+                if (!Directory.Exists(webRootPath))
+                    Directory.CreateDirectory(webRootPath);
                 
                 // Friendly developer error pages
                 //
